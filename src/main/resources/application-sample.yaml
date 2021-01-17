@@ -1,0 +1,7 @@
+spring.cloud.gateway.routes:
+  - id: mirror_yaml
+    uri: http://httpbin.org
+    predicates:
+      - Path=/mirror/**
+    filters:
+      - RewritePath=/mirror/(.*), /$1
