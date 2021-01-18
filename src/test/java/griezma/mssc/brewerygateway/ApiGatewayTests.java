@@ -9,7 +9,7 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @ActiveProfiles("sample")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //@AutoConfigureWireMock(port = 0)
-class GatewayTests {
+class ApiGatewayTests {
 
     @Autowired
     WebTestClient client;

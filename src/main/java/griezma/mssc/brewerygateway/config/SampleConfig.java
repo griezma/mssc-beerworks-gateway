@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class SampleConfig {
     @Bean
-    public RouteLocator routeLocator(RouteLocatorBuilder builder) {
+    public RouteLocator sampleRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("google", r -> r.path("/google")
                         .filters(f -> f.redirect(301, "https://www.google.com"))
