@@ -12,9 +12,9 @@
 
 
     <groupId>griezma.mssc</groupId>
-    <artifactId>mssc-brewery-gateway</artifactId>
+    <artifactId>mssc-beerworks-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mssc-brewery-gateway</name>
+    <name>mssc-beerworks-gateway</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
