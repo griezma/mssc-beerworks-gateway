@@ -1,15 +1,15 @@
 spring.cloud.gateway.routes:
-  - id: beerservice
+  - id: beer-service
     predicates:
       - Path=/api/v1/beer,/api/v1/beer/*,/api/v1/beerupc/*
-    uri: http://localhost:8080
+    uri: lb://beer-service
 
-  - id: orderservice
+  - id: beerorder-service
     predicates:
       - Path=/api/v1/customers/**
-    uri: http://localhost:8082
+    uri: lb://beerorder-service
 
-  - id: inventoryservice
+  - id: inventory-service
     predicates:
       - Path=/api/v1/beer/*/inventory
-    uri: http://localhost:8081
+    uri: lb://inventory-service
