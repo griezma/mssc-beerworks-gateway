@@ -1,4 +1,4 @@
-package griezma.mssc.brewerygateway;
+package griezma.mssc.apigateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

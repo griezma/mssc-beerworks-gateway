@@ -13,3 +13,13 @@ spring.cloud.gateway.routes:
     predicates:
       - Path=/api/v1/beer/*/inventory
     uri: lb://inventory-service
+    filters:
+      - name: CircuitBreaker
+        args:
+          name: inventoryCb
+          fallbackUri: forward:/api/v1/inventory-failover
+
+  - id: inventory-failover
+    predicates:
+      - Path=/api/v1/inventory-failover/**
+    uri: lb://inventory-failover
